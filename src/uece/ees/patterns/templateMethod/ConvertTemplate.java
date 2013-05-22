@@ -8,7 +8,7 @@ public abstract class ConvertTemplate {
 	
 	public final void convert() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("convert:");
+		System.out.println("Insert to Convert String:");
 		String string = scan.nextLine();
 		converter(string);
 		System.out.println("convert:" + string + " successfull!");
