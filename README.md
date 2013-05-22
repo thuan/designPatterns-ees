@@ -1,4 +1,4 @@
-Design Patterns 'GoF' implementation in Java
+Design Patterns 'GoF' in Java
 ==================
 Universidade Estadual do Ceará
 
