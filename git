@@ -1,0 +1,58 @@
+[33mcommit 748922685d152795a09d2427269fb64c9f5de122[m
+Merge: bdbab6b 3cb98a4
+Author: thuan <thuansaraiva@gmail.com>
+Date:   Wed May 22 11:00:24 2013 -0300
+
+    Merge branch 'source' of https://github.com/thuan/designPatterns-ees into source
+    
+    Conflicts:
+    	README.md
+
+[33mcommit bdbab6b90d401efacf73f546ac7f95417b6cf367[m
+Merge: b5471d6 cd304cc
+Author: thuan <thuansaraiva@gmail.com>
+Date:   Wed May 22 10:55:00 2013 -0300
+
+    Merge branch 'master' of https://github.com/thuan/designPatterns-ees into source
+
+[33mcommit b5471d69b3563f944558b941e722d2761b30bf96[m
+Author: thuan <thuansaraiva@gmail.com>
+Date:   Wed May 22 10:25:59 2013 -0300
+
+    resolve #5
+
+[33mcommit 3cb98a42729a154f29767827f5ae44ef28b3ccf7[m
+Author: Thuan Saraiva <thuansaraiva@gmail.com>
+Date:   Wed May 22 09:46:45 2013 -0300
+
+    Update README.md
+
+[33mcommit ec8a98cf62e0ed16f9b719f2316b6fc3c2f8f706[m
+Author: Thuan Saraiva <thuansaraiva@gmail.com>
+Date:   Wed May 22 09:46:07 2013 -0300
+
+    Update README.md
+
+[33mcommit 5ac6b1b634b061e999552ebab005b621659dfa52[m
+Author: Thuan Saraiva <thuansaraiva@gmail.com>
+Date:   Wed May 22 09:44:35 2013 -0300
+
+    Update README.md
+
+[33mcommit cd304cc445f914879d5b39c67df8b6525970c8f3[m
+Author: Thuan Saraiva <thuansaraiva@gmail.com>
+Date:   Wed May 22 09:41:30 2013 -0300
+
+    Update README.md
+
+[33mcommit 7ded7b0d8136d923516ed162700dc2af0ec0c556[m
+Author: Thuan Saraiva <thuansaraiva@gmail.com>
+Date:   Wed May 22 09:38:42 2013 -0300
+
+    Update README.md
+
+[33mcommit 9fb048c0558e0321343ef5e824d8909ad3bf9b57[m
+Author: thuan <thuansaraiva@gmail.com>
+Date:   Tue May 21 18:34:05 2013 -0300
+
+    initial commit
