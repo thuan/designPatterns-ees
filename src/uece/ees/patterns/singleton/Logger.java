@@ -2,19 +2,19 @@ package uece.ees.patterns.singleton;
 
 public class Logger {
 
-	private boolean ativo = false;
+	private boolean active = false;
 	public static Logger instance;
 
-	public boolean isAtivo() {
-		return ativo;
+	public boolean isActive() {
+		return active;
 	}
 
-	public void setAtivo(boolean ativo) {
-		this.ativo = ativo;
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public void log(String string) {
-		if (this.ativo) {
+		if (this.active) {
 			System.out.println("LOG :: " + string);
 		}
 
