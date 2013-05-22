@@ -4,12 +4,11 @@ public class Logger {
 
 	private boolean ativo = false;
 
-	public static Logger instance;
-	
-	protected LoggerStrategy strategy;
+	private LoggerStrategy strategy;
 
-	public Logger() {
-
+	public Logger(LoggerStrategy strategy) {
+		super();
+		this.strategy = strategy;
 	}
 
 	public boolean isAtivo() {
@@ -20,17 +19,11 @@ public class Logger {
 		this.ativo = ativo;
 	}
 
-	public void log(String string) {
+	public void log() {
 		if (this.ativo) {
-			System.out.println("LOG :: " + string);
+			this.strategy.setLog();
 		}
 
 	}
-
-	public static Logger getInstance() {
-		if (instance == null) {
-			instance = new Logger();
-		}
-		return instance;
-	}
+	
 }
