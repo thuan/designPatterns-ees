@@ -12,6 +12,13 @@ public class Client {
 		myFrozen = new TopChocolate(myFrozen);
 		System.out.println(myFrozen.getName());
 		System.out.println("Cost:" + myFrozen.getCost());
+		
+		FrozenYogurt anotherFrozen = new Strawberry();
+		System.out.println("Selected Flavor: " + anotherFrozen.getName() + " = " + anotherFrozen.getCost());
+		anotherFrozen = new TopCashews(anotherFrozen);
+		System.out.println(anotherFrozen.getName());
+		System.out.println("Cost:" + anotherFrozen.getCost());
+		
 	}
 
 }
