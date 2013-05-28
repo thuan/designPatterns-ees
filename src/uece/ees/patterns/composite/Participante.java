@@ -4,22 +4,16 @@ public abstract class Participante {
 
 	protected String nome;
 
-	protected int assento;
-
 	public String getNome() {
 		return nome;
 	}
 
 	public int getAssento() {
-		return assento;
+		return getAssento();
 	}
 
-	public void adicionar(Participante participante) {
+	public abstract void adicionar(Participante participante);
 
-	}
-
-	public void remover(Participante participante) {
-
-	}
+	public abstract void remover(Participante participante);
 
 }

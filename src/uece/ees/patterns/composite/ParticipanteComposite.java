@@ -7,8 +7,8 @@ public class ParticipanteComposite extends Participante {
 	
 	ArrayList<Participante> participantes = new ArrayList<Participante>();
 	
-	public ParticipanteComposite(Participante participantes) {
-		super();
+	public ParticipanteComposite(Participante participante) {
+		
 	}
 
 	@Override
@@ -19,17 +19,6 @@ public class ParticipanteComposite extends Participante {
 	@Override
 	public void remover(Participante participante) {
 		participantes.remove(participante);
-	}
-	
-	@Override
-	public String getNome() {
-		// TODO Auto-generated method stub
-		return super.getNome();
-	}
-	
-	@Override
-	public int getAssento() {
-		return super.getAssento();
 	}
 	
 }

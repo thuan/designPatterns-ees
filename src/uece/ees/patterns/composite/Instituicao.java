@@ -1,31 +1,28 @@
 package uece.ees.patterns.composite;
 
+import java.util.ArrayList;
+
 public class Instituicao extends Participante {
-	private String membros;
+	private ArrayList<Individuo> membros;
 
 	public Instituicao(String nome) {
 		super.nome = nome;
 	}
 
-	public String getMembros() {
-		return membros;
-	}
-
-	public void setMembros(String membros) {
-		this.membros = membros;
-	}
-
 	@Override
 	public void adicionar(Participante participante) {
-		super.adicionar(participante);
+		participante.adicionar(new Instituicao(nome));
+		membros.add(new Individuo(getNome(), getAssento()));
+
 	}
 
 	@Override
 	public void remover(Participante participante) {
-		super.remover(participante);
+		participante.remover(new Instituicao(nome));
+		membros.remove(new Individuo(getNome(), getAssento()));
 	}
 
 	public void imprimeMembros() {
-		System.out.println("Membros:" + getMembros());
+		System.out.println(membros);
 	}
 }
