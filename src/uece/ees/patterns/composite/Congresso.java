@@ -1,47 +1,31 @@
 package uece.ees.patterns.composite;
 
+
 public class Congresso {
 
-	private String nome;
-	private int totalAssentos;
-	private int participantes;
+	public String nome;
+	public int totalAssentos;
+	public int participantes;
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
+	public Congresso(String nome, int totalAssentos) {
+		super();
 		this.nome = nome;
-	}
-
-	public int getTotalAssentos() {
-		return totalAssentos;
-	}
-
-	public void setTotalAssentos(int totalAssentos) {
 		this.totalAssentos = totalAssentos;
 	}
 
-	public int getParticipantes() {
-		return participantes;
+	public int getTotalParticipantes() {
+		return totalAssentos - participantes;
 	}
 
-	public void setParticipantes(int participantes) {
-		this.participantes = participantes;
-	}
-
-	private void getTotalParticipantes() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private void adicionarParticipantes() {
-		// TODO Auto-generated method stub
+	public void adicionarParticipante(Participante participante) {
+		if (getTotalParticipantes() > 0) {
+			participantes++;
+		}
 
 	}
 
-	private void imprimeParticipantes() {
-		// TODO Auto-generated method stub
-
+	public void imprimeParticipantes() {
+		System.out.println("Participantes:");
 	}
+
 }
