@@ -3,16 +3,16 @@ package uece.ees.patterns.composite;
 public class Instituicao extends Participante {
 	private String membros;
 
+	public Instituicao(String nome) {
+		super.nome = nome;
+	}
+
 	public String getMembros() {
 		return membros;
 	}
 
 	public void setMembros(String membros) {
 		this.membros = membros;
-	}
-
-	public Instituicao(String nome) {
-		super.nome = nome;
 	}
 
 	@Override

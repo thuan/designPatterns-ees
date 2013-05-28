@@ -20,4 +20,16 @@ public class ParticipanteComposite extends Participante {
 	public void remover(Participante participante) {
 		participantes.remove(participante);
 	}
+	
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return super.getNome();
+	}
+	
+	@Override
+	public int getAssento() {
+		return super.getAssento();
+	}
+	
 }
