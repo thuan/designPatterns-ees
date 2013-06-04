@@ -11,35 +11,6 @@ public class Pedido {
 	private String refrigerante;
 	private String brinquedo;
 
-	public void adicionarDentroDaCaixa(String item) {
-		dentroDaCaixa.add(item);
-	}
-
-	public void adicionarForaDaCaixa(String item) {
-		foraDaCaixa.add(item);
-	}
-
-	@Override
-	public String toString() {
-
-		StringBuffer buffer = new StringBuffer();
-
-		buffer.append("Seu pedido:\n");
-		buffer.append("Dentro da caixa:\n");
-
-		for (String item : dentroDaCaixa) {
-			buffer.append("\t" + item + "\n");
-			buffer.append("fora da caixa:\n");
-		}
-
-		for (String item : foraDaCaixa) {
-			buffer.append("\t" + item + "\n");
-			buffer.append("Pedido concluido\n\n");
-		}
-
-		return buffer.toString();
-	}
-
 	public String getSanduiche() {
 		return sanduiche;
 	}
@@ -70,6 +41,36 @@ public class Pedido {
 
 	public void setBrinquedo(String brinquedo) {
 		this.brinquedo = brinquedo;
+	}
+
+	public void adicionarDentroDaCaixa(String item) {
+		dentroDaCaixa.add(item);
+	}
+
+	public void adicionarForaDaCaixa(String item) {
+		foraDaCaixa.add(item);
+	}
+
+	@Override
+	public String toString() {
+
+		StringBuffer buffer = new StringBuffer();
+
+		buffer.append("Seu pedido:\n");
+		
+
+		for (String item : dentroDaCaixa) {
+			buffer.append("Dentro da caixa:\n");
+			buffer.append("\t" + item + "\n");
+		}
+
+		for (String item : foraDaCaixa) {
+			buffer.append("Fora da caixa:\n");
+			buffer.append("\t" + item + "\n");
+			buffer.append("Pedido concluido\n\n");
+		}
+
+		return buffer.toString();
 	}
 
 }
