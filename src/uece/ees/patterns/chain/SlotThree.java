@@ -7,8 +7,8 @@ public class SlotThree extends MachineChain {
 	}
 
 	@Override
-	public int getValue() {
-		System.out.println("Ten Cents");
-		return 10;
+	public double getCoin() {
+		System.out.println("fifty cents");
+		return 0.50;
 	}
 }
