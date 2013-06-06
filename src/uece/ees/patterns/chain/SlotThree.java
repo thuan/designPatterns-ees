@@ -7,8 +7,17 @@ public class SlotThree extends MachineChain {
 	}
 
 	@Override
-	public int getValue() {
-		System.out.println("Ten Cents");
-		return 10;
+	protected double payment() {
+		System.out.println("SlotThree: 0,50 cents");
+		double payout = 0.50 * getCoins();
+		double payBack = payout - getProductValue();
+		if (payout == getProductValue()) {
+			System.out.println("Get your product: " + getProductName()
+					+ "\nValue:" + getProductValue() + "\nno Payout");
+		} else {
+			System.out.println("Get your product: " + getProductName()
+					+ "\nValue:" + getProductValue() + "\npayBack:" + payBack);
+		}
+		return payout;
 	}
 }
