@@ -7,9 +7,18 @@ public class SlotOne extends MachineChain {
 	}
 
 	@Override
-	public double getCoin() {
-		System.out.println("Ten cents");
-		return 0.10;
+	protected double payment() {
+		System.out.println("SlotOne: 0,10 cents");
+		double payout = 0.10 * getCoins();
+		double payBack = payout - getProductValue();
+		if (payout == getProductValue()) {
+			System.out.println("Get your product: " + getProductName()
+					+ "\nValue:" + getProductValue() + "\nno Payout");
+		} else {
+			System.out.println("Get your product: " + getProductName()
+					+ "\nValue:" + getProductValue() + "\npayBack:" + payBack);
+		}
+		return payout;
 	}
 
 }

@@ -3,15 +3,19 @@ package uece.ees.patterns.chain;
 public class Client {
 
 	public static void main(String[] args) {
-
-		MachineChain machine = new SlotOne();
-		machine.setNextSlots(new SlotTwo());
-		machine.setNextSlots(new SlotThree());
-
+		// set slots
+		MachineChain coinSlots = new SlotThree();
+		coinSlots.setNextSlots(new SlotTwo());
+		coinSlots.setNextSlots(new SlotOne());
+		// select slot
+		coinSlots.setProductName("Soda");
+		coinSlots.setProductValue(1.00);
+		coinSlots.setCoins(20);
+		// select the payment form
 		try {
-			machine.insertCoin(Slots.slotOne);
-			machine.insertCoin(Slots.slotTwo);
-			machine.insertCoin(Slots.slotThree);
+			coinSlots.paymentSlot(Slots.slotOne);
+			coinSlots.paymentSlot(Slots.slotTwo);
+			coinSlots.paymentSlot(Slots.slotThree);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

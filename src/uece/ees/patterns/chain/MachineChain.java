@@ -3,15 +3,34 @@ package uece.ees.patterns.chain;
 public abstract class MachineChain {
 
 	protected MachineChain nextSlots;
+	protected Slots selectedSlot;
 	private String productName;
 	private double productValue;
-	protected Slots selectedSlot;
+	private int coins;
 
-	public abstract double getCoin();
+	protected abstract double payment();
 
 	public MachineChain(Slots slots) {
 		nextSlots = null;
 		selectedSlot = slots;
+	}
+
+	public boolean isMachineSlot(Slots slots) {
+		if (selectedSlot == slots) {
+			return true;
+		}
+		return false;
+	}
+
+	public void paymentSlot(Slots slots) throws Exception {
+		if (isMachineSlot(slots)) {
+			payment();
+		} else {
+			if (nextSlots == null) {
+				throw new Exception("invalid slot");
+			}
+			nextSlots.paymentSlot(slots);
+		}
 	}
 
 	public String getProductName() {
@@ -30,25 +49,20 @@ public abstract class MachineChain {
 		this.productValue = productValue;
 	}
 
-	public boolean validation(Slots slots) {
-		if (selectedSlot == slots) {
-			return true;
-		}
-		return false;
+	public int getCoins() {
+		return coins;
 	}
 
-	public void insertCoin(Slots slots) throws Exception {
-		if (validation(slots)) {
-			getCoin();
+	public void setCoins(int coins) {
+		this.coins = coins;
+	}
+
+	public void setNextSlots(MachineChain next) {
+		if (nextSlots == null) {
+			nextSlots = next;
 		} else {
-			if (nextSlots == null) {
-				throw new Exception("Machine fails");
-			}
+			nextSlots.setNextSlots(next);
 		}
-	}
-
-	public void setNextSlots(MachineChain nextSlots) {
-		this.nextSlots = nextSlots;
 	}
 
 }
