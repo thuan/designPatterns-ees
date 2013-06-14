@@ -5,6 +5,10 @@ public class Logger {
 	private boolean active = false;
 	public static Logger instance;
 
+	public Logger() {
+		
+	}
+
 	public boolean isActive() {
 		return active;
 	}
@@ -20,9 +24,9 @@ public class Logger {
 
 	}
 
-	public static Logger getInstance() {
+	public synchronized static Logger getInstance() {
 		if (instance == null) {
-			instance = new Logger();
+			Logger.instance = new Logger();
 		}
 		return instance;
 	}

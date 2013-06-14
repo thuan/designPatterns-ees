@@ -2,12 +2,20 @@ package uece.ees.patterns.strategy;
 
 public class LoggerDatabase implements LoggerStrategy {
 
-	@Override
-	public void setLog() {
-		System.out.println("log database");
+	public static LoggerDatabase instanceDatabase;
 
+	@Override
+	public void setLog(Logger logger) {
+		if (logger.isAtivo()) {
+			logger.log("DATABASE");
+		}
 	}
 
-	
+	public synchronized static LoggerDatabase getInstanceDatabase() {
+		if (instanceDatabase == null) {
+			LoggerDatabase.instanceDatabase = new LoggerDatabase();
+		}
+		return instanceDatabase;
+	}
 
 }

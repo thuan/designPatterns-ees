@@ -3,12 +3,11 @@ package uece.ees.patterns.strategy;
 public class Logger {
 
 	private boolean ativo = false;
+	public static Logger instance;
+	public LoggerStrategy strategy;
 
-	private LoggerStrategy strategy;
-
-	public Logger(LoggerStrategy strategy) {
-		super();
-		this.strategy = strategy;
+	public Logger() {
+	
 	}
 
 	public boolean isAtivo() {
@@ -19,11 +18,17 @@ public class Logger {
 		this.ativo = ativo;
 	}
 
-	public void log() {
+	public void log(String string) {
 		if (this.ativo) {
-			this.strategy.setLog();
+			System.out.println("LOG :: " + string);
 		}
-
 	}
-	
+
+	public synchronized static Logger getInstance() {
+		if (instance == null) {
+			Logger.instance = new Logger();
+		}
+		return Logger.instance;
+	}
+
 }
